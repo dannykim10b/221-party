@@ -24,6 +24,7 @@
 
 .middle-column {
   width: 60%;
+  position: relative;
   /* border: 2px solid black; */
 }
 
@@ -113,59 +114,12 @@
 
 .friend {
   display: flex;
-  position: absolute;
-  margin: auto 0;
+  /* position: absolute;
+  margin: auto 0; */
   z-index: 9;
-}
-
-.danny {
-  top: 50%;
-  left: 3%;
-}
-
-.gabe {
-  top: 50%;
-  left: 3%;
-}
-
-.john {
-  top: 50%;
-  left: 3%;
-}
-
-.kaiden {
-  top: 50%;
-  left: 3%;
-}
-
-.justin {
-  top: 50%;
-  left: 3%;
-}
-
-.susan {
-  top: 50%;
-  left: 3%;
-}
-
-.kayoung {
-  top: 50%;
-  left: 3%;
-}
-
-.joice {
-  top: 50%;
-  left: 3%;
-}
-
-.hannah {
-  top: 50%;
-  left: 3%;
-}
-
-.annie {
-  top: 50%;
-  left: 3%;
+  width: 100%;
+  position: absolute;
+  height: auto;
 }
 
 @media only screen and (max-width: 768px) {
