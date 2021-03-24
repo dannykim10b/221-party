@@ -1,38 +1,20 @@
 import './App.css'
-import SoundSliders from './221/sliders'
-import AddFriends from './221/addfriends'
-import React from 'react';
-import MusicPlayer from './221/musicplayer'
+import React, {useState} from 'react';
 import Door from './221/door'
 import Darkmode from './221/darkmode'
+import Inside221 from './221/inside221'
 
 
 function App() {
-  const [inside, setInside] = React.useState(false)
-  const [darkmode, setDarkmode] = React.useState(false)
+  const [inside, setInside] = useState(false)
 
   const enterRoom = () => {
     setInside(!inside)
   }
-
-  const toggleDarkmode = () => {
-    setDarkmode(!darkmode)
-  }
   
   const insideRoom = () => {
     if(inside) {
-      return <>
-      <div className="bg-image">
-        <div>
-          <Darkmode value={darkmode} onToggle={toggleDarkmode}></Darkmode>
-          <SoundSliders></SoundSliders>
-          <AddFriends></AddFriends>
-        </div>
-        <div className="musicplayer">
-          <iframe src="https://open.spotify.com/embed/playlist/4QFEs4By53kTqnZnRWAdbb" width="250" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
-      </div>
-      </>
+      return <Inside221></Inside221>
     } else {
       return <Door onKnock={enterRoom}></Door>
     }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Switch from '@material-ui/core/Switch';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -17,7 +17,7 @@ import hannah from '../img/Hannahcrop.jpg';
 import annie from '../img/anniecrop.jpg'
 
 export default function AddFriends() {
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
       danny: false,
       gabe: false,
       john: false,
@@ -36,7 +36,7 @@ export default function AddFriends() {
 
   return (
     <>
-    <div className="addFriends">
+    <div className="inside221Container add-friends">
     <FormControl component="fieldset">
       <FormLabel component="legend">Add Friends</FormLabel>
       <FormGroup row>
@@ -88,16 +88,16 @@ export default function AddFriends() {
     </FormControl>
     </div>
     <div>
-      {state.danny && <img class="danny" src={danny} width="75" height="75" alt="danny"/>}
-      {state.gabe && <img class="gabe" src={gabe} width="75" height="75" alt="gabe"/>}
-      {state.john && <img class="john" src={john} width="75" height="75" alt="john"/>}
-      {state.kaiden && <img class="kaiden" src={kaiden} width="75" height="75" alt="kaiden"/>}
-      {state.justin && <img class="justin" src={justin} width="75" height="75" alt="justin"/>}
-      {state.susan && <img class="susan" src={susan} width="75" height="75" alt="susan"/>}
-      {state.kayoung && <img class="kayoung" src={kayoung} width="75" height="75" alt="kayoung"/>}
-      {state.joice && <img class="joice" src={joice} width="75" height="75" alt="joice"/>}
-      {state.hannah && <img class="hannah" src={hannah} width="75" height="75" alt="hannah"/>}
-      {state.annie && <img class="annie" src={annie} width="75" height="75" alt="annie"/>}
+      {state.danny && <img class="friend danny" src={danny} width="75" height="75" alt="danny"/>}
+      {state.gabe && <img class="friend gabe" src={gabe} width="75" height="75" alt="gabe"/>}
+      {state.john && <img class="friend john" src={john} width="75" height="75" alt="john"/>}
+      {state.kaiden && <img class="friend kaiden" src={kaiden} width="75" height="75" alt="kaiden"/>}
+      {state.justin && <img class="friend justin" src={justin} width="75" height="75" alt="justin"/>}
+      {state.susan && <img class="friend susan" src={susan} width="75" height="75" alt="susan"/>}
+      {state.kayoung && <img class="friend kayoung" src={kayoung} width="75" height="75" alt="kayoung"/>}
+      {state.joice && <img class="friend joice" src={joice} width="75" height="75" alt="joice"/>}
+      {state.hannah && <img class="friend hannah" src={hannah} width="75" height="75" alt="hannah"/>}
+      {state.annie && <img class="friend annie" src={annie} width="75" height="75" alt="annie"/>}
     </div>
     </>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
@@ -12,26 +12,20 @@ import conversationsound from '../audio/conversation.mp3'
 import "./221.css"
 
 export default function SoundSliders() {
-  const [pingpong, setPingpong] = React.useState(0)
-  const [gabecough, setGabecough] = React.useState(0)
-  const [kaidencod, setKaidencod] = React.useState(0)
-  const [johnpraise, setJohnpraise] = React.useState(0)
-  const [conversation, setConversation] = React.useState(0)
+  const [pingpong, setPingpong] = useState(0)
+  const [gabecough, setGabecough] = useState(0)
+  const [kaidencod, setKaidencod] = useState(0)
+  const [johnpraise, setJohnpraise] = useState(0)
+  const [conversation, setConversation] = useState(0)
 
 
-  React.useEffect(() => {
-    ppaudio.current.volume = pingpongvolume
-    gcaudio.current.volume = gabecoughvolume
-    kcaudio.current.volume = kaidencodvolume
-    jpaudio.current.volume = johnpraisevolume
-    convaudio.current.volume = conversationvolume
+  useEffect(() => {
+    document.getElementById("ppaudio").volume = pingpongvolume
+    document.getElementById("gcaudio").volume = gabecoughvolume
+    document.getElementById("kcaudio").volume = kaidencodvolume
+    document.getElementById("jpaudio").volume = johnpraisevolume
+    document.getElementById("convaudio").volume = conversationvolume
   })
-
-  const ppaudio = React.useRef('pingpongaudio')
-  const gcaudio = React.useRef('gabecoughaudio')
-  const kcaudio = React.useRef('kaidencodaudio')
-  const jpaudio = React.useRef('johnpraiseaudio')
-  const convaudio = React.useRef('conversationaudio')
 
   const pingpongvolume = (pingpong/100).toFixed(1)
   const gabecoughvolume = (gabecough/100).toFixed(1)
@@ -40,13 +34,13 @@ export default function SoundSliders() {
   const conversationvolume = (conversation/100).toFixed(1)
 
   return (
-    <div className="sliders">
+    <div className="inside221Container sliders">
 
-      <audio ref={ppaudio} src={pingpongsound} autoPlay loop/>
-      <audio ref={gcaudio} src={gabecoughsound} autoPlay loop/>
-      <audio ref={kcaudio} src={kaidencodsound} autoPlay loop/>
-      <audio ref={jpaudio} src={johnpraisesound} autoPlay loop/>
-      <audio ref={convaudio} src={conversationsound} autoPlay loop/>
+      <audio id="ppaudio"  src={pingpongsound} autoPlay loop/>
+      <audio id="gcaudio" src={gabecoughsound} autoPlay loop/>
+      <audio id="kcaudio" src={kaidencodsound} autoPlay loop/>
+      <audio id="jpaudio" src={johnpraisesound} autoPlay loop/>
+      <audio id="convaudio" src={conversationsound} autoPlay loop/>
 
       <Grid container spacing={2} justify="space-around" alignItems="flex-end">
 

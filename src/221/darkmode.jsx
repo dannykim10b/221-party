@@ -26,7 +26,7 @@ export default function Darkmode(props) {
     }
 
     return (
-        <div>
+        <div className="inside221Container darkmode">
             <IconButton>
                 {props.value ? toggleLightButton() : toggleDarkButton()}
             </IconButton>
