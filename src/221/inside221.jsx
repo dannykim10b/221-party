@@ -14,6 +14,7 @@ import kayoung from '../img/kayoungcrop.png';
 import joice from '../img/joicecrop.png';
 import hannah from '../img/hannahcrop.png';
 import annie from '../img/anniecrop.png'
+import alex from '../img/alexcrop.png'
 
 export default function Inside221(props) {
     const [darkmode, setDarkmode] = useState(false)
@@ -58,6 +59,7 @@ export default function Inside221(props) {
                     {state.joice && <img class="inside221Container friend" src={joice} alt="joice"/>}
                     {state.hannah && <img class="inside221Container friend" src={hannah} alt="hannah"/>}
                     {state.annie && <img class="inside221Container friend" src={annie} alt="annie"/>}
+                    {darkmode && <img class="inside 221Container alex" src={alex} alt="alex"/>}
                 </div>
                 <div className="inside221Container right-column">
                     <SoundSliders></SoundSliders>

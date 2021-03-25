@@ -5,11 +5,11 @@
   height: calc(100vh - 60px);
   margin: 30px auto;
   width: 95%;
+  position: relative;
 }
 
 .title {
   height: 80px;
-  /* border: 2px solid black; */
   width: fit-content;
 }
 
@@ -19,50 +19,46 @@
   flex-direction: column;
   height: inherit;
   justify-content: space-between;
-  /* border: 2px solid black; */
 }
 
 .middle-column {
   width: 60%;
   position: relative;
-  /* border: 2px solid black; */
 }
 
 .right-column {
   width: 20%;
-  /* border: 2px solid black; */
 }
 
 .room-image {
   width: 100%;
   height: auto;
-  /* max-height: 98vh; */
-  /* border: 2px solid black; */
+  z-index: 8;
 }
 
-/*fix*/
 .darkmode {
   position: absolute;
   margin: auto 0;
-  top: 3%;
-  left: 3%;
-  -ms-transform: translate(-50%, -50%);
+  top: 1%;
+  left: 47%;
+  width: fit-content;
+  height: auto;
+  /* -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  max-height: 50px;
+  max-height: 50px; */
 }
 
 .sliders {
   display: block;
   width: 175px;
-  /* border: 2px solid black; */
   height: fit-content;
+  text-align: center;
 }
 
 .add-friends {
   display: block;
   max-width: 250px;
   height: 250px;
-  /* border: 2px solid black; */
   width: fit-content;
 }
 
@@ -79,16 +75,12 @@
 }
 
 .doorContainer {
-  /* text-align: center;
-  position: relative; */
   position: relative;
   align-items: center;
   display: flex;
   justify-content: space-between;
   height: 100vh;
   margin: 0px auto;
-  /* width: 95%; */
-  /* border: 2px solid black; */
 }
 
 .center {
@@ -114,9 +106,15 @@
 
 .friend {
   display: flex;
-  /* position: absolute;
-  margin: auto 0; */
   z-index: 9;
+  width: 100%;
+  position: absolute;
+  height: auto;
+}
+
+.alex {
+  display: flex;
+  z-index: 7;
   width: 100%;
   position: absolute;
   height: auto;
@@ -180,31 +178,20 @@
   }
 
   .doorContainer {
-    /* text-align: center;
-    position: relative; */
     align-items: center;
     display: flex;
     justify-content: space-between;
     height: 100vh;
     margin: 0px auto;
-    /* width: 95%; */
-    /* border: 2px solid black; */
   }
 
   .door-image {
     width: 100%;
-    /* max-width: 700px; */
     height: auto;
   }
 
   .knock-button {
-    /* position: absolute; */
     height: fit-content;
-    /* margin: auto 0; */
-    /* top: 50%;
-    left: 50%; */
-    /* -ms-transform: translate(-50%, -50%); */
     transform: translate(-50%, -50%);
-    /* transform: translate(50%, 50%); */
   }
 }
